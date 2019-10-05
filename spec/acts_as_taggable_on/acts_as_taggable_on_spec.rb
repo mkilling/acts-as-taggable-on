@@ -168,15 +168,15 @@ describe 'Acts As Taggable On' do
     end
 
     it 'should not raise an error when passed nil' do
-      expect(-> {
+      expect {
         TaggableModel.acts_as_taggable_on
-      }).to_not raise_error
+      }.to_not raise_error
     end
 
     it 'should not raise an error when passed [nil]' do
-      expect(-> {
+      expect {
         TaggableModel.acts_as_taggable_on([nil])
-      }).to_not raise_error
+      }.to_not raise_error
     end
 
     it 'should include dynamic contexts in tagging_contexts' do
